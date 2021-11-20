@@ -11,36 +11,52 @@ third_no = int(input("Enter your third desired number: "))
 fourth_no = int(input("Enter your fourth desired number: "))
 # what number is the smallest
 
-smallest = 0
-small = 0
-middle = 0
-large = 0
+first = 0
+second = 0
+third = 0
+fourth = 0
 
 # If 
-# first situation
-if first_no < third_no and first_no < second_no:
-    smallest = first_no
-    if second_no < third_no and second_no < first_no:
-        smallest = second_no
+# first statement
+if first_no < fourth_no and first_no < third_no and first_no < second_no:
+    first = first_no
+    if second_no < fourth_no and second_no < third_no and second_no < first_no:
+        first = second_no
+    if third_no < first_no and fourth_no < second_no and fourth_no < third_no:
+        first = third_no
     else:
-        smallest = third_no
+        first = fourth_no
 
-# second situation
-elif first_no < second_no and first_no < third_no:
-    small = first_no
-    if second_no > first_no and second_no < third_no: 
-        small = second_no
+# second statement
+elif first_no < second_no and first_no < third_no and first_no < fourth_no:
+    second = first_no
+    if second_no < first_no and second_no < third_no and second_no < fourth_no: 
+        second = second_no
+    if third_no < first_no and third_no < second_no and third_no < fourth_no:
+        second = third_no
     else: 
-        small = third_no
+        second = fourth_no
 
-# third situation
-elif first_no > second_no and first_no > third_no:
-    middle = first_no
-    if second_no > first_no and second_no > third_no:
-        middle = second_no
+# third statement
+elif first_no < second_no and first_no < third_no and first_no < fourth_no:
+    third = first_no
+    if second_no < first_no and second_no < third_no and second_no < fourth_no:
+        second = second_no
+    if third_no < first_no and third_no < second_no and third_no < third_no:
+        second = third_no
     else:
-        middle = third_no
+        second = fourth_no
+
+# fourth statement
+elif first_no < second_no and first_no < third_no and first_no < fourth_no:
+    fourth = first_no
+    if second_no < first_no and second_no < third_no and second_no < fourth_no:
+        fourth_no = second_no
+    if third_no < first_no and third_no < second_no and third_no < fourth_no:
+        fourth_no = third_no
+    else:
+        fourth = fourth_no
 
 
 # display
-print("The numbers from highest to lowest are: ", smallest, small, middle)
+print("The numbers from highest to lowest are: ", first, second, third, fourth)
