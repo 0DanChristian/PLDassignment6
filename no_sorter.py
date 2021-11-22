@@ -55,3 +55,18 @@ elif third_no >= fourth_no >= first_no >= second_no:
 elif third_no >= fourth_no >= second_no >= first_no:
     print(f"\n\033[92mFrom highest to lowest, the arrangement of the numbers from the given is, \033[1m{third_no}, {fourth_no}, {second_no}, and {first_no}. ")
 
+# fourth statement if the fourth given is the highest
+elif fourth_no >= first_no >= second_no >= third_no:
+    print(f"\n\033[92mFrom highest to lowest, the arrangement of the numbers from the given is, \033[1m{fourth_no}, {first_no}, {second_no}, and {third_no}. ")
+elif fourth_no >= first_no >= third_no >= second_no:
+    print(f"\n\033[92mFrom highest to lowest, the arrangement of the numbers from the given is, \033[1m{fourth_no}, {first_no}, {third_no}, and {second_no}. ")
+elif fourth_no >= second_no >= first_no >= third_no:
+    print(f"\n\033[92mFrom highest to lowest, the arrangement of the numbers from the given is, \033[1m{fourth_no}, {second_no}, {first_no}, and {third_no}. ")
+elif fourth_no >= second_no >= third_no >= first_no:
+    print(f"\n\033[92mFrom highest to lowest, the arrangement of the numbers from the given is, \033[1m{fourth_no}, {second_no}, {third_no}, and {first_no}. ")
+elif fourth_no >= third_no >= first_no >= second_no:
+    print(f"\n\033[92mFrom highest to lowest, the arrangement of the numbers from the given is, \033[1m{fourth_no}, {third_no}, {first_no}, and {second_no}. ")
+else:
+    print(f"\n\033[92mFrom highest to lowest, the arrangement of the numbers from the given is, \033[1m{fourth_no}, {third_no}, {second_no}, and {first_no}. ")
+
+# thanks for a classmate's idea, this is much easier from before.
