@@ -51,3 +51,44 @@ while maxinf <= items:
             print("You are good!")
         elif user_ans.isdigit() == True:
             # correct answers
+            if int(user_ans) == system_answer:
+                cor_ans += 1
+                maxinf += 1
+                if cor_ans == 10:
+                    None
+                elif cor_ans >= 8 or cor_ans == 9:
+                    print("That was great!")
+                elif cor_ans >= 5 or cor_ans == 7:
+                    print("Hooray")
+                elif cor_ans >= 1 or cor_ans == 4:
+                    print("That was nice!")
+            # wrong answers
+            elif int(user_ans) != system_answer:
+                if wro_ans == 9:
+                    print(f"The correct answer for no.{maxinf} is \033[91m{system_answer}.\033[0m")
+                elif wro_ans >=7 or wro_ans == 8:
+                    print(f"The correct answer for no.{maxinf} is \033[91m{system_answer}.\033[0m")
+                elif wro_ans >=4 or wro_ans == 6:
+                    print(f"The correct answer for no.{maxinf} is \033[91m{system_answer}.\033[0m")
+                elif wro_ans >=0 or wro_ans == 3:
+                    print(f"The answer for no.{maxinf} is \033[91m{system_answer}.\033[0m")
+
+                wro_ans += 1
+                maxinf += 1
+        elif user_ans.isalnum() == True:
+            print("\033[91mPlease take this seriously, if not, this quiz will never end.\033[0m")
+        else:
+            print("\033[93mThis program only accepts number as an input.\033[0m")
+
+
+# grading
+if cor_ans >= 10 and wro_ans == 0:
+    print(f"\nYou are so good at this \033[1m{user}\033[0m you did a very great job! your grade is \033[92m{cor_ans}/{items}.\033[0m")
+elif cor_ans >= 5 or cor_ans == 9 and wro_ans >= 1:
+    print(f"\nYou are so good at this \033[1m{user}\033[0m you did a very great job! your grade is \033[92m{cor_ans}/{items}.\033[0m")
+elif cor_ans >= 1 or cor_ans ==4 and wro_ans >= 1:
+    print(f"\nThat was great! \033[1m{user}\033[0m you did a very great job! your grade is \033[92m{cor_ans}/{items}.\033[0m")
+elif cor_ans == 0 and wro_ans >= 0:
+    print(f"\nNot everyone is good at the beginning \033[1m{user}\033[0m :> your grade is \033[92m{cor_ans}/{items}.\033[0m")
+
+
