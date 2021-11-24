@@ -3,6 +3,7 @@ from random import randrange
 import math
 import sys
 from time import sleep
+
 # var
 maxinf = 1
 cor_ans = 0
@@ -30,3 +31,23 @@ while not ready :
                 break
             else:
                 be_ready = ""
+string = (f"\n\033[91mEmbrace yourself\033[0m \033[1m{user}\033[0m\033[91m, we are about to begin.\033[0m \n")
+for letter in string:
+    sleep(0.10)
+    sys.stdout.write(letter)
+    sys.stdout.flush()
+
+while maxinf <= items:
+
+        no_one = randrange(0, 499)
+        no_two = randrange(499, 999)
+        system_answer = no_one + no_two
+        if maxinf < items:
+            print(f"Item no. {maxinf} out of {items}. \n\033[1m{no_one} + {no_two}.\033[0m\n")
+        elif maxinf == items:
+            print(f"Item no. {maxinf} out of {items}. \n\033[1m{no_one} + {no_two}.\033[0m\n")
+        user_ans = input("What is your answer?\n")
+        if user_ans.isalpha() == True:
+            print("You are good!")
+        elif user_ans.isdigit() == True:
+            # correct answers
